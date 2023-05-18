@@ -1,17 +1,27 @@
-import banner from '../../assets/images/bannerPic.jpg';
+import banner from "../../assets/images/bannerPic.jpg";
+import vectorBg from '../../assets/images/vectorBg.png';
 
 const Banner = () => {
-    return (
-        <div className='flex justify-between'>
-            <div className='w-1/2'>
-                <h2 className="title"><span className="text-colorPrimary">Discover</span> New Collection</h2>
-                <h3 className="title">World Class Kids Toy</h3>
-            </div>
-            <div className='w-1/2'>
-                <img src={banner}/>
-            </div>
+    const bgImage = {
+        backgroundImage:`url(${vectorBg})`
+    }
+
+  return (
+    <div style={bgImage} className="flex justify-between bg-no-repeat bg-left mb-10">
+      <div className="w-1/2 flex items-center justify-center">
+        <div>
+          <h2 className="title">
+            <span className="text-colorPrimary">Discover</span> New Collection
+          </h2>
+          <h3 className="title">World Class Teddy Bear</h3>
+          <button className="btn btn-primary">Shop Now</button>
         </div>
-    );
+      </div>
+      <div className="w-1/2 bg-neutral-400 rounded-lg">
+        <img src={banner} className="rounded-lg"/>
+      </div>
+    </div>
+  );
 };
 
 export default Banner;

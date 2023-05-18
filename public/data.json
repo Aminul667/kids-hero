@@ -1,0 +1,62 @@
+[
+    {
+        "id": 1,
+        "name": "Miles Morales",
+        "photo": "https://bbts1.azureedge.net/images/p/thumb/2023/04/d143a8b2-76c1-4a09-aadd-3d964b5a19a5.png",
+        "price": "25",
+        "rating": "4.5",
+        "category": "Spider Man",
+        "quantity": "10",
+        "description": "Miles Gonzalo Morales is a fictional character, a superhero appearing in American comic books published by Marvel Comics. "
+    },
+    {
+        "id": 2,
+        "name": "Miles Morales",
+        "photo": "https://bbts1.azureedge.net/images/p/thumb/2021/08/64053838-de33-4c68-8e53-29546cc905cd.png",
+        "price": "25",
+        "rating": "4.5",
+        "category": "Spider Man",
+        "quantity": "5",
+        "description": "Miles Gonzalo Morales is a fictional character, a superhero appearing in American comic books published by Marvel Comics. "
+    },
+    {
+        "id": 3,
+        "name": "Clark Kent",
+        "photo": "https://bbts1.azureedge.net/images/p/thumb/2023/05/3aa91f4d-e5bd-4619-b9e7-77f9ca3ea8d7.jpg",
+        "price": "25",
+        "rating": "4.5",
+        "category": "Super Man",
+        "quantity": "15",
+        "description": "Clark Joseph Kent, best known by his superhero persona Superman."
+    },
+    {
+        "id": 4,
+        "name": "Bruce Wayne",
+        "photo": "https://bbts1.azureedge.net/images/p/thumb/2022/03/0bb7edbe-f90d-49a2-8030-19796b74171c.jpg",
+        "price": "25",
+        "rating": "4",
+        "category": "Batman",
+        "quantity": "15",
+        "description": "Batman is a superhero appearing in American comic books published by DC Comics."
+    },
+    {
+        "id": 5,
+        "name": "Two Face ",
+        "photo": "https://bbts1.azureedge.net/images/p/thumb/2020/02/a3bc2db3-46d9-4e60-89d4-f804a2c79e60.jpg",
+        "price": "20",
+        "rating": "3",
+        "category": "Supervillain ",
+        "quantity": "15",
+        "description": "Batman is a superhero appearing in American comic books published by DC Comics."
+    },
+    {
+        "id": 6,
+        "name": "Batman",
+        "photo": "https://bbts1.azureedge.net/images/p/thumb/2022/03/96d026c4-8815-4e4e-b647-ee423a27ac7b.jpg",
+        "price": "20",
+        "rating": "3",
+        "category": "Supervillain",
+        "quantity": "15",
+        "description": "Batman is a superhero appearing in American comic books published by DC Comics."
+    }
+]

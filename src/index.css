@@ -6,6 +6,6 @@
 
 @layer components {
     .title {
-        @apply font-semibold font-jost text-6xl mb-4;
+        @apply font-semibold font-jost text-4xl mb-4;
     }
 }
