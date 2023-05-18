@@ -5,7 +5,7 @@ const NavBar = () => {
   const [showMobileMenu, setShowMobileMenu] = useState(false);
   return (
     <nav className="mb-5">
-      <div className="max-w-7xl mx-auto flex items-center justify-between h-16 px-4 border-b border-solid border-slate-600">
+      <div className="mx-auto flex items-center justify-between h-16 px-4 border-b border-solid border-slate-600">
         <div className="flex-shrink-0 font-bold tracking-wider">
           <span>LOGO</span>
           <span>WebName</span>
