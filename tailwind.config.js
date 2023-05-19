@@ -2,12 +2,11 @@
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
-    extend: {},
+    extend: {
+      colors: { colorPrimary: "#4E7D64" },
+    },
     fontFamily: {
       jost: ["Jost", "sans-serif"],
-    },
-    colors: {
-      colorPrimary: "#4E7D64",
     },
   },
   plugins: [require("daisyui")],

@@ -1,6 +1,18 @@
+import { useContext } from "react";
 import { NavLink } from "react-router-dom";
+import { AuthContext } from "../../../provider/AuthProvider";
 
 const Menu = () => {
+  const { user, logOut } = useContext(AuthContext);
+
+  const handleLogout = () => {
+    logOut()
+      .then()
+      .catch((error) => {
+        console.log(error);
+      });
+  };
+
   const activeStyle = {
     color: "white",
     backgroundColor: "#4E7D64",
@@ -43,13 +55,22 @@ const Menu = () => {
       >
         Blogs
       </NavLink>
-      <NavLink
-        to="/login"
-        className="block md:inline-block px-3 py-2 rounded-md hover:text-white hover:bg-[#4E7D64] focus:outline-none focus:text-white focus:bg-[#4E7D64]"
-        style={({ isActive }) => (isActive ? activeStyle : {})}
-      >
-        Login
-      </NavLink>
+      {!user ? (
+        <NavLink
+          to="/login"
+          className="block md:inline-block px-3 py-2 rounded-md hover:text-white hover:bg-[#4E7D64] focus:outline-none focus:text-white focus:bg-[#4E7D64]"
+          style={({ isActive }) => (isActive ? activeStyle : {})}
+        >
+          Login
+        </NavLink>
+      ) : (
+        <button
+          onClick={handleLogout}
+          className="block md:inline-block px-3 py-2 rounded-md hover:text-white hover:bg-[#4E7D64] focus:outline-none focus:text-white focus:bg-[#4E7D64]"
+        >
+          Logout
+        </button>
+      )}
     </div>
   );
 };

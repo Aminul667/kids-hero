@@ -1,8 +1,12 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import Menu from "./Menu";
+import { AuthContext } from "../../../provider/AuthProvider";
 
 const NavBar = () => {
+  const { user } = useContext(AuthContext);
   const [showMobileMenu, setShowMobileMenu] = useState(false);
+  console.log(user);
+
   return (
     <nav className="mb-5">
       <div className="mx-auto flex items-center justify-between h-16 px-4 border-b border-solid border-slate-600">
@@ -14,7 +18,13 @@ const NavBar = () => {
           <Menu />
         </div>
         <div className="text-3xl font-bold">
-          <h2>User Pic</h2>
+          {user && (
+            <div className="avatar">
+              <div className="w-14 rounded-full">
+                <img src={user.photoURL} title={user.displayName} />
+              </div>
+            </div>
+          )}
         </div>
         <button
           type="button"
