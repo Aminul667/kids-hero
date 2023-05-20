@@ -1,11 +1,14 @@
+import logo from "../../../assets/images/logo.png";
+
 const Footer = () => {
   return (
-    <footer className="footer footer-center p-10 bg-[#4E7D64] rounded text-white">
-      <div className="grid grid-flow-col gap-4">
+    <footer className="footer footer-center p-10 bg-[#4E7D64] rounded text-white font-jost">
+      <div className="grid grid-flow-col gap-5">
+        <img src={logo} alt="" className="w-16"/>
         <a className="link link-hover">About us</a>
         <a className="link link-hover">Contact</a>
         <a className="link link-hover">Jobs</a>
-        <a className="link link-hover">Press kit</a>
+        <a className="link link-hover">Address</a>
       </div>
       <div>
         <div className="grid grid-flow-col gap-4">
@@ -45,7 +48,7 @@ const Footer = () => {
         </div>
       </div>
       <div>
-        <p>Copyright © 2023 - All right reserved by KidsToy Ltd</p>
+        <p>Copyright © 2023 - All right reserved by KidsHero Ltd</p>
       </div>
     </footer>
   );

@@ -34,7 +34,10 @@ const Menu = () => {
       >
         All Toys
       </NavLink>
-      <NavLink
+      {
+        user ? (
+          <>
+          <NavLink
         to="/mytoys"
         className="block md:inline-block px-3 py-2 rounded-md hover:text-white hover:bg-[#4E7D64] focus:outline-none focus:text-white focus:bg-[#4E7D64]"
         style={({ isActive }) => (isActive ? activeStyle : {})}
@@ -48,6 +51,9 @@ const Menu = () => {
       >
         Add A Toy
       </NavLink>
+          </>
+        ):null
+      }
       <NavLink
         to="/blog"
         className="block md:inline-block px-3 py-2 rounded-md hover:text-white hover:bg-[#4E7D64] focus:outline-none focus:text-white focus:bg-[#4E7D64]"

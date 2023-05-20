@@ -1,6 +1,7 @@
 import { useContext, useState } from "react";
 import Menu from "./Menu";
 import { AuthContext } from "../../../provider/AuthProvider";
+import logo from "../../../assets/images/logo.png";
 
 const NavBar = () => {
   const { user } = useContext(AuthContext);
@@ -10,9 +11,9 @@ const NavBar = () => {
   return (
     <nav className="mb-5">
       <div className="mx-auto flex items-center justify-between h-16 px-4 border-b border-solid border-slate-600">
-        <div className="flex-shrink-0 font-bold tracking-wider">
-          <span>LOGO</span>
-          <span>WebName</span>
+        <div className="flex justify-between items-center">
+          <img src={logo} alt="" className="w-[50px]"/>
+          <h2 className="font-jost text-3xl font-bold"><span className="text-colorPrimary">Kids</span>Hero</h2>
         </div>
         <div className="hidden md:block">
           <Menu />
