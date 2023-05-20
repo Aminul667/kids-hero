@@ -7,8 +7,8 @@ const Banner = () => {
     }
 
   return (
-    <div style={bgImage} className="flex justify-between bg-no-repeat bg-left mb-10">
-      <div className="w-1/2 flex items-center justify-center">
+    <div style={bgImage} className="md:flex md:justify-between bg-no-repeat bg-left mb-10">
+      <div className="md:w-1/2 flex items-center justify-center">
         <div>
           <h2 className="title">
             <span className="text-colorPrimary">Discover</span> New Collection
@@ -17,7 +17,7 @@ const Banner = () => {
           <button className="btn btn-primary">Shop Now</button>
         </div>
       </div>
-      <div className="w-1/2 bg-neutral-400 rounded-lg">
+      <div className="md:w-1/2 bg-neutral-400 rounded-lg">
         <img src={banner} className="rounded-lg"/>
       </div>
     </div>
