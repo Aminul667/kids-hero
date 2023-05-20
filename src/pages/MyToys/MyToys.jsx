@@ -44,6 +44,8 @@ const MyToys = () => {
                   key={toy._id}
                   toy={toy}
                   count={toys.indexOf(toy)}
+                  toys={toys}
+                  setToys={setToys}
                 ></MyToyRow>
               ))}
             </tbody>
