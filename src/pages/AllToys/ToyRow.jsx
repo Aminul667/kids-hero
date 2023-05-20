@@ -5,7 +5,7 @@ const ToyRow = ({ toy, count }) => {
   const { _id, sellerName, toyName, category, price, quantity } = toy;
 
   const handleViewDetails = (id) => {
-    navigate(`/details/${id}`);
+    navigate(`/alltoys/${id}`);
   };
 
   return (

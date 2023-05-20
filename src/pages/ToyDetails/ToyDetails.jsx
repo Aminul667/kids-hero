@@ -1,6 +1,6 @@
 
-const ToyDetails = ({toy}) => {
-    
+const ToyDetails = () => {
+
     return (
         <div>
             <h2>This is ToyDetails</h2>
