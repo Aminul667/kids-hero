@@ -12,10 +12,8 @@ const UpdateToys = () => {
   const {_id} = toy;
 
   const handleUpdate = (updatedToy) => {
-    console.log("testing", updatedToy);
-
     // send data to the server
-    fetch(`http://localhost:5000/update-toys/${_id}`, {
+    fetch(`https://b7a11-kids-toy-server.vercel.app/update-toys/${_id}`, {
       method: "PUT",
       headers: {
         "content-type": "application/json",
@@ -24,7 +22,6 @@ const UpdateToys = () => {
     })
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
         if (data.modifiedCount > 0) {
           Swal.fire({
             title: "Success!",

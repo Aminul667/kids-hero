@@ -1,5 +1,4 @@
 const Toy = ({ toy }) => {
-  console.log(toy);
   const {name, photo, price, rating} = toy;
   return (
     <div>

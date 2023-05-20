@@ -6,7 +6,6 @@ const MyToyRow = ({ toy, count, toys, setToys }) => {
   const { _id, toyName, category, price, quantity } = toy;
 
   const handleDelete = (_id) => {
-    console.log(_id);
     Swal.fire({
       title: "Are you sure?",
       text: "You won't be able to revert this!",
@@ -18,12 +17,11 @@ const MyToyRow = ({ toy, count, toys, setToys }) => {
     }).then((result) => {
       if (result.isConfirmed) {
         // Swal.fire("Deleted!", "Your file has been deleted.", "success");
-        fetch(`http://localhost:5000/toys/${_id}`, {
+        fetch(`https://b7a11-kids-toy-server.vercel.app/toys/${_id}`, {
           method: "DELETE",
         })
           .then((res) => res.json())
           .then((data) => {
-            console.log(data);
             if (data.deletedCount > 0) {
               Swal.fire("Deleted!", "Your file has been deleted.", "success");
               const remaining = toys.filter(

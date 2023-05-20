@@ -6,7 +6,6 @@ import logo from "../../../assets/images/logo.png";
 const NavBar = () => {
   const { user } = useContext(AuthContext);
   const [showMobileMenu, setShowMobileMenu] = useState(false);
-  console.log(user);
 
   return (
     <nav className="mb-5">

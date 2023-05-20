@@ -7,11 +7,8 @@ const AddToy = () => {
   const { register, handleSubmit, formState, reset } = useForm();
   const { isSubmitSuccessful } = formState;
 
-  console.log(user);
-
   const onSubmit = (addToy) => {
-    console.log(addToy);
-    fetch("http://localhost:5000/toys", {
+    fetch("https://b7a11-kids-toy-server.vercel.app/toys", {
       method: "POST",
       headers: {
         "content-type": "application/json",
