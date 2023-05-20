@@ -37,7 +37,7 @@ const MyToyRow = ({ toy, count, toys, setToys }) => {
   };
 
   const handleUpdate = (_id) => {
-    navigate('/updatetoy');
+    navigate(`/updatetoy/${_id}`);
   };
 
   return (

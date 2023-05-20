@@ -2,14 +2,39 @@
 import { useContext } from "react";
 import { useForm } from "react-hook-form";
 import { AuthContext } from "../../provider/AuthProvider";
+import Swal from "sweetalert2";
+import { useLoaderData } from "react-router-dom";
 
 const UpdateToys = () => {
   const { user } = useContext(AuthContext);
   const { register, handleSubmit, formState, reset } = useForm();
+  const toy = useLoaderData();
+  const {_id} = toy;
 
-  const handleUpdate = () => {
-    console.log("testing");
-  }
+  const handleUpdate = (updatedToy) => {
+    console.log("testing", updatedToy);
+
+    // send data to the server
+    fetch(`http://localhost:5000/update-toys/${_id}`, {
+      method: "PUT",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(updatedToy),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+        if (data.modifiedCount > 0) {
+          Swal.fire({
+            title: "Success!",
+            text: "Coffee Updated Successfully",
+            icon: "success",
+            confirmButtonText: "Cool",
+          });
+        }
+      });
+  };
 
   return (
     <>
