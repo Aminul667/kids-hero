@@ -7,7 +7,7 @@ const AllToys = () => {
   console.log(allToysData);
 
   return (
-    <div className="mt-10">
+    <div className="mt-10 mb-10">
       <h2 className="title text-center mb-5">This is All Toys Component</h2>
       <div className="overflow-x-auto">
         <table className="table table-zebra w-full">

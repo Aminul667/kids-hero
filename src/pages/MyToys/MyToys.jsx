@@ -20,7 +20,7 @@ const MyToys = () => {
 
   return (
     <div>
-      <div className="mt-10">
+      <div className="mt-10 mb-10">
         <h2 className="title text-center mb-5">This is My Toys Component</h2>
         <div className="overflow-x-auto">
           <table className="table table-zebra w-full">
