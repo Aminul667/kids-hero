@@ -1,5 +1,10 @@
+import { useLoaderData, useNavigate } from "react-router-dom";
+import { FaArrowLeft } from "react-icons/fa";
 
-const ToyDetails = ({ setShowModal, toy }) => {
+const ToyDetails = () => {
+  const navigate = useNavigate();
+  const toy = useLoaderData();
+
   const {
     photo,
     toyName,
@@ -9,24 +14,41 @@ const ToyDetails = ({ setShowModal, toy }) => {
     ratting,
     quantity,
     description,
-  } = toy;
+  } = toy[0];
+
+  console.log(toyName);
+
+  const handleNavigation = () => {
+    navigate(-1, { replace: true });
+  };
 
   return (
-    <div className="modal modal-bottom sm:modal-middle modal-open">
-      <div className="modal-box">
-        <div className="flex justify-center mb-3">
-          <img src={photo} alt="" />
+    <div className="mb-10">
+      <h2 className="title mb-5">Our Special {toyName}</h2>
+      <div className="card lg:card-side bg-base-100 shadow-xl">
+        <figure>
+          <img
+            src={photo}
+            className="md:w-[400px]"
+          />
+        </figure>
+        <div className="card-body">
+          <h2 className="font-jost font-bold text-3xl">Name: {toyName}</h2>
+          <p className="font-jost text-xl">Seller Name: {sellerName}</p>
+          <p className="font-jost text-xl">Seller Email: {email}</p>
+          <p className="font-jost text-xl">Price: {price}</p>
+          <p className="font-jost text-xl">Ratting: {ratting}</p>
+          <p className="font-jost text-xl">Quantity: {quantity}</p>
+          <p className="font-jost text-xl">Description: {description}</p>
+          <div className="card-actions justify-end">
+            <button
+              onClick={handleNavigation}
+              className="btn bg-white text-black p-0 border-none hover:bg-white"
+            >
+              <FaArrowLeft></FaArrowLeft> Back to the Toys
+            </button>
+          </div>
         </div>
-        <h2 className="text-3xl font-medium mb-2">{toyName}</h2>
-        <h2 className="text-2xl font-medium mb-2">Seller: {sellerName}</h2>
-        <h2 className="text-2xl font-medium mb-2">Email: {email}</h2>
-        <h2 className="text-2xl font-medium mb-2">Price: ${price}</h2>
-        <h2 className="text-2xl font-medium mb-2">Ratting: {ratting}</h2>
-        <h2 className="text-2xl font-medium mb-2">Quantity: {quantity}</h2>
-        <p className="w-[400px]">{description}</p>
-        <button onClick={() => setShowModal(false)} className="btn btn-primary">
-          Close
-        </button>
       </div>
     </div>
   );

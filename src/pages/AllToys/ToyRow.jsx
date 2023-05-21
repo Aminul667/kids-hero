@@ -1,9 +1,13 @@
-import { useState } from "react";
-import ToyDetails from "../ToyDetails/ToyDetails";
+
+import { useNavigate } from "react-router-dom";
 
 const ToyRow = ({ toy, count }) => {
-  const [showModal, setShowModal] = useState(false);
+  const navigate = useNavigate();
   const { _id, sellerName, toyName, category, price, quantity } = toy;
+
+  const handleNavigate = (_id) => {
+    navigate(`details/${_id}`);
+  }
   
   return (
     <>
@@ -16,18 +20,11 @@ const ToyRow = ({ toy, count }) => {
         <td>{quantity}</td>
         <td>
           <button
-            onClick={() => setShowModal(true)}
+            onClick={() => handleNavigate(_id)}
             className="tracking-wide text-neutral-50 transition-colors duration-200 transform bg-[#4E7D64] rounded-md hover:bg-[#1e422f] focus:outline-none focus:bg-[#1e422f] px-3 py-1"
           >
             Details
           </button>
-          {showModal ? (
-            <ToyDetails
-              key={_id}
-              setShowModal={setShowModal}
-              toy={toy}
-            ></ToyDetails>
-          ) : null}
         </td>
       </tr>
     </>
