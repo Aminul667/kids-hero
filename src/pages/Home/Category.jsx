@@ -28,7 +28,7 @@ const Category = ({ toys }) => {
             </div>
           </TabPanel>
           <TabPanel>
-            <div>
+            <div className="md:grid md:grid-cols-3">
               {toys
                 .filter((filterToy) => filterToy.category === "Batman")
                 .map((toy) => (
@@ -37,7 +37,7 @@ const Category = ({ toys }) => {
             </div>
           </TabPanel>
           <TabPanel>
-            <div>
+            <div className="md:grid md:grid-cols-3">
               {toys
                 .filter((filterToy) => filterToy.category === "Spiderman")
                 .map((toy) => (
