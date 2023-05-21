@@ -6,7 +6,7 @@ import money from "../../assets/images/money.png";
 const Services = () => {
   return (
     <>
-      <h2 className="title text-center" data-aos="fade-down">
+      <h2 className="title text-center mt-10" data-aos="fade-down">
         Our Services
       </h2>
       <div className="md:flex md:justify-between md:gap-2 mb-10">

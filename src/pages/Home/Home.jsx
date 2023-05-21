@@ -1,7 +1,9 @@
 // import { useEffect, useState } from "react";
 // import { useState } from "react";
+import { useLoaderData } from "react-router-dom";
 import useTitle from "../../hooks/useTitle";
 import Banner from "./Banner";
+import Category from "./Category";
 import Choice from "./Choice";
 // import Toy from "./Toy";
 // import { useLoaderData } from "react-router-dom";
@@ -12,6 +14,9 @@ import Services from "./Services";
 
 const Home = () => {
   useTitle('Home')
+  const toys = useLoaderData();
+
+  // console.log('Home',toys);
   // const [selectedCategory, setSelectedCategory] = useState(null);
   // const [filteredData, setFilteredData] = useState([]);
 
@@ -41,6 +46,7 @@ const Home = () => {
     <div>
       <Banner></Banner>
       <Gallery></Gallery>
+      <Category toys={toys}></Category>
       <Services></Services>
       <Choice></Choice>
     </div>
