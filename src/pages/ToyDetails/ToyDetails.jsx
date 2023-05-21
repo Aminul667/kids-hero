@@ -1,6 +1,8 @@
 import { useLoaderData, useNavigate } from "react-router-dom";
 import { FaArrowLeft } from "react-icons/fa";
 import useTitle from "../../hooks/useTitle";
+import { Rating } from "@smastrom/react-rating";
+import "@smastrom/react-rating/style.css";
 
 const ToyDetails = () => {
   useTitle("Details");
@@ -36,7 +38,10 @@ const ToyDetails = () => {
             <p className="font-jost text-xl mt-2">Seller Name: {sellerName}</p>
             <p className="font-jost text-xl mt-2">Seller Email: {email}</p>
             <p className="font-jost text-xl mt-2">Price: {price}</p>
-            <p className="font-jost text-xl mt-2">Ratting: {ratting}</p>
+            <p className="font-jost text-xl mt-2">
+              Ratting:{" "}
+              <Rating style={{ maxWidth: 150 }} value={ratting} readOnly />
+            </p>
             <p className="font-jost text-xl mt-2">Quantity: {quantity}</p>
             <p className="font-jost text-xl mt-2">Description: {description}</p>
           </div>
