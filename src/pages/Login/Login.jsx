@@ -1,8 +1,10 @@
 import { useContext, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../provider/AuthProvider";
+import useTitle from "../../hooks/useTitle";
 
 const Login = () => {
+  useTitle('Login')
   // collecting authentication information from auth context
   const { signIn, signInWithGoogle } = useContext(AuthContext);
 

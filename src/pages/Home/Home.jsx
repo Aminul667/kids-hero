@@ -1,5 +1,6 @@
 // import { useEffect, useState } from "react";
 // import { useState } from "react";
+import useTitle from "../../hooks/useTitle";
 import Banner from "./Banner";
 import Choice from "./Choice";
 // import Toy from "./Toy";
@@ -10,6 +11,7 @@ import Services from "./Services";
 // import "react-tabs/style/react-tabs.css";
 
 const Home = () => {
+  useTitle('Home')
   // const [selectedCategory, setSelectedCategory] = useState(null);
   // const [filteredData, setFilteredData] = useState([]);
 

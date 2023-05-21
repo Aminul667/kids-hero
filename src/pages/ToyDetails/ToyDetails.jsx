@@ -1,7 +1,10 @@
 import { useLoaderData, useNavigate } from "react-router-dom";
 import { FaArrowLeft } from "react-icons/fa";
+import useTitle from "../../hooks/useTitle";
 
 const ToyDetails = () => {
+  useTitle('Details');
+  
   const navigate = useNavigate();
   const toy = useLoaderData();
 
