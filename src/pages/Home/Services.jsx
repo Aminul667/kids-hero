@@ -6,9 +6,16 @@ import money from "../../assets/images/money.png";
 const Services = () => {
   return (
     <>
-    <h2 className="title text-center">Our Services</h2>
+      <h2 className="title text-center" data-aos="fade-down">
+        Our Services
+      </h2>
       <div className="md:flex md:justify-between md:gap-2 mb-10">
-        <div className="flex justify-evenly w-80 p-4 bg-[#FBFAF3] rounded-lg mb-4">
+        <div
+          className="flex justify-evenly w-80 p-4 bg-[#FBFAF3] rounded-lg mb-4"
+          data-aos="fade-right"
+          data-aos-offset="300"
+          data-aos-easing="ease-in-sine"
+        >
           <img className="w-10" src={car} alt="" />
           <div>
             <h3 className="font-jost font-medium text-xl">
@@ -17,14 +24,24 @@ const Services = () => {
             <p className="font-jost">Orders Over $100</p>
           </div>
         </div>
-        <div className="flex justify-evenly w-80 p-4 bg-[#FBFAF3] rounded-lg mb-4">
+        <div
+          className="flex justify-evenly w-80 p-4 bg-[#FBFAF3] rounded-lg mb-4"
+          data-aos="fade-right"
+          data-aos-offset="300"
+          data-aos-easing="ease-in-sine"
+        >
           <img className="w-10" src={gift} alt="" />
           <div>
             <h3 className="font-jost font-medium text-xl">Gift Card</h3>
             <p className="font-jost">Perfect Gift For All</p>
           </div>
         </div>
-        <div className="flex justify-evenly w-80 p-4 bg-[#FBFAF3] rounded-lg mb-4">
+        <div
+          className="flex justify-evenly w-80 p-4 bg-[#FBFAF3] rounded-lg mb-4"
+          data-aos="fade-right"
+          data-aos-offset="300"
+          data-aos-easing="ease-in-sine"
+        >
           <img className="w-10" src={support} alt="" />
           <div>
             <h3 className="font-jost font-medium text-xl">
@@ -33,7 +50,12 @@ const Services = () => {
             <p className="font-jost">Hours: 8am - 8 pm</p>
           </div>
         </div>
-        <div className="flex justify-evenly w-80 p-4 bg-[#FBFAF3] rounded-lg mb-4">
+        <div
+          className="flex justify-evenly w-80 p-4 bg-[#FBFAF3] rounded-lg mb-4"
+          data-aos="fade-right"
+          data-aos-offset="300"
+          data-aos-easing="ease-in-sine"
+        >
           <img className="w-10" src={money} alt="" />
           <div>
             <h3 className="font-jost font-medium text-xl">Money Back</h3>

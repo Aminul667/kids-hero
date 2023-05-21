@@ -1,8 +1,13 @@
 import sale from "../../assets/images/sale.png";
 const Choice = () => {
   return (
-    <div className="md:flex md:justify-around">
-      <div className="flex justify-center items-center">
+    <div className="md:flex md:justify-around mb-10">
+      <div
+        className="flex justify-center items-center"
+        data-aos="fade-right"
+        data-aos-offset="300"
+        data-aos-easing="ease-in-sine"
+      >
         <div className="text-center">
           <img src={sale} alt="" className="mb-4" />
           <h2 className="title">
@@ -17,10 +22,14 @@ const Choice = () => {
           </p>
         </div>
       </div>
-      <div>
+      <div
+        data-aos="fade-left"
+        data-aos-anchor="#example-anchor"
+        data-aos-offset="500"
+        data-aos-duration="500"
+      >
         <img
           src="https://i.ibb.co/2Z3KZVT/batman.jpg"
-          alt=""
           className="md:w-[400px]"
         />
       </div>
