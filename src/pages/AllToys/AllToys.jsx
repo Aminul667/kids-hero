@@ -3,11 +3,9 @@ import ToyRow from "./ToyRow";
 import useTitle from "../../hooks/useTitle";
 
 const AllToys = () => {
-  useTitle('All Toys');
+  useTitle("All Toys");
   const allToysData = useLoaderData();
-
-  console.log(allToysData);
-
+  
   return (
     <div className="mt-10 mb-10">
       <h2 className="title text-center mb-5">This is All Toys Component</h2>

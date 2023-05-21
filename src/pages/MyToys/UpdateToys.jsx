@@ -3,13 +3,15 @@ import { useContext } from "react";
 import { useForm } from "react-hook-form";
 import { AuthContext } from "../../provider/AuthProvider";
 import Swal from "sweetalert2";
-import { useLoaderData } from "react-router-dom";
+import { useLoaderData, useNavigate } from "react-router-dom";
 
 const UpdateToys = () => {
+  const navigate = useNavigate();
   const { user } = useContext(AuthContext);
-  const { register, handleSubmit, formState, reset } = useForm();
+  const { register, handleSubmit } = useForm();
+
   const toy = useLoaderData();
-  const {_id} = toy;
+  const { _id } = toy;
 
   const handleUpdate = (updatedToy) => {
     // send data to the server
@@ -25,11 +27,12 @@ const UpdateToys = () => {
         if (data.modifiedCount > 0) {
           Swal.fire({
             title: "Success!",
-            text: "Coffee Updated Successfully",
+            text: "Toy Updated Successfully",
             icon: "success",
             confirmButtonText: "Cool",
           });
         }
+        navigate(-1, { replace: true });
       });
   };
 
@@ -105,6 +108,10 @@ const UpdateToys = () => {
                   <option>Superman</option>
                   <option>Spiderman</option>
                   <option>Batman</option>
+                  <option>Thor</option>
+                  <option>Ironman</option>
+                  <option>Captain</option>
+                  <option>Wolverine</option>
                   <option>Villain</option>
                 </select>
                 <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">

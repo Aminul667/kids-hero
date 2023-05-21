@@ -22,7 +22,9 @@ const Banner = () => {
             <span className="text-colorPrimary">Discover</span> New Collection
           </h2>
           <h3 className="title">World Class Teddy Bear</h3>
-          <button className="btn btn-primary">Shop Now</button>
+          <button className="tracking-wide text-neutral-50 transition-colors duration-200 transform bg-[#4E7D64] rounded-md hover:bg-[#1e422f] focus:outline-none focus:bg-[#1e422f] px-3 py-3">
+            Shop Now
+          </button>
         </div>
       </div>
       <div

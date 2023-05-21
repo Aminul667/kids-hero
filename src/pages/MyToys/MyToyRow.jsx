@@ -23,7 +23,7 @@ const MyToyRow = ({ toy, count, toys, setToys }) => {
           .then((res) => res.json())
           .then((data) => {
             if (data.deletedCount > 0) {
-              Swal.fire("Deleted!", "Your file has been deleted.", "success");
+              Swal.fire("Deleted!", "Your item has been deleted.", "success");
               const remaining = toys.filter(
                 (filterToy) => filterToy._id !== _id
               );

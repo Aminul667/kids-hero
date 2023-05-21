@@ -1,11 +1,12 @@
 import { useNavigate } from "react-router-dom";
+import { Rating } from "@smastrom/react-rating";
+import "@smastrom/react-rating/style.css";
 
 const Toy = ({ toy }) => {
   const { _id, toyName, photo, price, ratting } = toy;
   const navigate = useNavigate();
 
   const handleDetails = (_id) => {
-    console.log(_id);
     navigate(`alltoys/details/${_id}`);
   };
 
@@ -14,10 +15,10 @@ const Toy = ({ toy }) => {
       <img className="rounded-t-lg" src={photo} />
       <div className="p-5">
         <h2 className="font-jost font-semibold text-2xl mb-3">{toyName}</h2>
-        <p className="font-jost text-2xl">${price}</p>
-        <p className="font-jost text-2xl">{ratting}</p>
+        <p className="font-jost text-2xl mb-3">${price}</p>
+        <p className="font-jost text-2xl mb-3"><Rating style={{ maxWidth: 150 }} value={ratting} readOnly /></p>
         <button
-          className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-3 py-2 text-center inline-flex items-center  dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+          className="tracking-wide text-neutral-50 transition-colors duration-200 transform bg-[#4E7D64] rounded-md hover:bg-[#1e422f] focus:outline-none focus:bg-[#1e422f] px-3 py-2"
           onClick={() => handleDetails(_id)}
         >
           Details

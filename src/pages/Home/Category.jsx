@@ -3,8 +3,6 @@ import "react-tabs/style/react-tabs.css";
 import Toy from "./Toy";
 
 const Category = ({ toys }) => {
-  console.log("Category", toys);
-
   return (
     <>
       <h2 className="title text-center" data-aos="fade-down">

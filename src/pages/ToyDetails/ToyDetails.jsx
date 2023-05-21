@@ -3,8 +3,8 @@ import { FaArrowLeft } from "react-icons/fa";
 import useTitle from "../../hooks/useTitle";
 
 const ToyDetails = () => {
-  useTitle('Details');
-  
+  useTitle("Details");
+
   const navigate = useNavigate();
   const toy = useLoaderData();
 
@@ -19,8 +19,6 @@ const ToyDetails = () => {
     description,
   } = toy[0];
 
-  console.log(toyName);
-
   const handleNavigation = () => {
     navigate(-1, { replace: true });
   };
@@ -30,19 +28,18 @@ const ToyDetails = () => {
       <h2 className="title mb-5">Our Special {toyName}</h2>
       <div className="card lg:card-side bg-base-100 shadow-xl">
         <figure>
-          <img
-            src={photo}
-            className="md:w-[400px]"
-          />
+          <img src={photo} className="" />
         </figure>
         <div className="card-body">
-          <h2 className="font-jost font-bold text-3xl">Name: {toyName}</h2>
-          <p className="font-jost text-xl">Seller Name: {sellerName}</p>
-          <p className="font-jost text-xl">Seller Email: {email}</p>
-          <p className="font-jost text-xl">Price: {price}</p>
-          <p className="font-jost text-xl">Ratting: {ratting}</p>
-          <p className="font-jost text-xl">Quantity: {quantity}</p>
-          <p className="font-jost text-xl">Description: {description}</p>
+          <div>
+            <h2 className="font-jost font-bold text-3xl">Name: {toyName}</h2>
+            <p className="font-jost text-xl mt-2">Seller Name: {sellerName}</p>
+            <p className="font-jost text-xl mt-2">Seller Email: {email}</p>
+            <p className="font-jost text-xl mt-2">Price: {price}</p>
+            <p className="font-jost text-xl mt-2">Ratting: {ratting}</p>
+            <p className="font-jost text-xl mt-2">Quantity: {quantity}</p>
+            <p className="font-jost text-xl mt-2">Description: {description}</p>
+          </div>
           <div className="card-actions justify-end">
             <button
               onClick={handleNavigation}
