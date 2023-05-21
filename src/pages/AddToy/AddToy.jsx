@@ -11,9 +11,11 @@ const AddToy = () => {
   const { isSubmitSuccessful } = formState;
 
   const onSubmit = (addToy) => {
-    console.log(addToy);
     addToy.price = parseInt(addToy.price);
-    fetch("http://localhost:5000/toys", {
+    addToy.quantity = parseInt(addToy.quantity);
+    addToy.ratting = parseInt(addToy.ratting);
+
+    fetch("https://b7a11-kids-toy-server.vercel.app/toys", {
       method: "POST",
       headers: {
         "content-type": "application/json",
@@ -93,6 +95,7 @@ const AddToy = () => {
                 id="grid-last-name"
                 {...register("email")}
                 defaultValue={user?.email}
+                type="email"
                 required
               />
             </div>
@@ -136,6 +139,7 @@ const AddToy = () => {
               <input
                 className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-2 px-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
                 {...register("price")}
+                type="number"
                 required
               />
             </div>
@@ -160,6 +164,7 @@ const AddToy = () => {
               <input
                 className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-2 px-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
                 {...register("quantity")}
+                type="number"
                 required
               />
             </div>

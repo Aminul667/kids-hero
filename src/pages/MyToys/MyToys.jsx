@@ -11,10 +11,10 @@ const MyToys = () => {
 
   const email = user?.email;
 
-  // const url = `http://localhost:5000/toys/${email}?sort=${asc ? 'asc' : 'dsc'}`;
+  // const url = `https://b7a11-kids-toy-server.vercel.app/toys/${email}?sort=${asc ? 'asc' : 'dsc'}`;
 
   useEffect(() => {
-    fetch(`http://localhost:5000/toys/${email}?sort=${asc ? 'asc' : 'dsc'}`)
+    fetch(`https://b7a11-kids-toy-server.vercel.app/toys/${email}?sort=${asc ? 'asc' : 'dsc'}`)
       .then((res) => res.json())
       .then((data) => {
         setToys(data);
