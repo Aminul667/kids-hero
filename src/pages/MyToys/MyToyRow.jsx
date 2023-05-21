@@ -17,7 +17,7 @@ const MyToyRow = ({ toy, count, toys, setToys }) => {
     }).then((result) => {
       if (result.isConfirmed) {
         // Swal.fire("Deleted!", "Your file has been deleted.", "success");
-        fetch(`https://b7a11-kids-toy-server.vercel.app/toys/${_id}`, {
+        fetch(`http://localhost:5000/toys/${_id}`, {
           method: "DELETE",
         })
           .then((res) => res.json())

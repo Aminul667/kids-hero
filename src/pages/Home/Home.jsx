@@ -1,12 +1,13 @@
 // import { useEffect, useState } from "react";
-import { useState } from "react";
+// import { useState } from "react";
 import Banner from "./Banner";
+import Choice from "./Choice";
 // import Toy from "./Toy";
-import { useLoaderData } from "react-router-dom";
-import { Tab, TabList, TabPanel, Tabs } from "react-tabs";
-import "react-tabs/style/react-tabs.css";
+// import { useLoaderData } from "react-router-dom";
+// import { Tab, TabList, TabPanel, Tabs } from "react-tabs";
 import Gallery from "./Gallery";
 import Services from "./Services";
+// import "react-tabs/style/react-tabs.css";
 
 const Home = () => {
   // const [selectedCategory, setSelectedCategory] = useState(null);
@@ -39,6 +40,7 @@ const Home = () => {
       <Banner></Banner>
       <Gallery></Gallery>
       <Services></Services>
+      <Choice></Choice>
     </div>
   );
 };
@@ -54,5 +56,3 @@ export default Home;
         </div>
       </div> */
 }
-
-

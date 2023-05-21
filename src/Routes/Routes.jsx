@@ -9,6 +9,7 @@ import Login from "../pages/Login/Login";
 import Register from "../pages/Register/Register";
 import ToyDetails from "../pages/ToyDetails/ToyDetails";
 import UpdateToys from "../pages/MyToys/UpdateToys";
+import Superman from "../pages/Home/Superman";
 
 const router = createBrowserRouter([
   {
@@ -18,22 +19,26 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home></Home>,
-        loader: () => fetch('https://b7a11-kids-toy-server.vercel.app/toys')
+        loader: () => fetch('http://localhost:5000/toys')
+      },
+      {
+        path: "/superman",
+        element: <Superman></Superman>
       },
       {
         path: "alltoys",
         element: <AllToys></AllToys>,
-        loader:() => fetch('https://b7a11-kids-toy-server.vercel.app/all-toys')
+        loader:() => fetch('http://localhost:5000/all-toys')
       },
       {
         path: "mytoys",
         element: <MyToys></MyToys>
-        // loader: ({params}) => fetch(`https://b7a11-kids-toy-server.vercel.app/toys/${params.id}`)
+        // loader: ({params}) => fetch(`http://localhost:5000/toys/${params.id}`)
       },
       {
         path:"updatetoy/:id",
         element: <UpdateToys></UpdateToys>,
-        loader: ({params}) => fetch(`https://b7a11-kids-toy-server.vercel.app/update-toys/${params.id}`)
+        loader: ({params}) => fetch(`http://localhost:5000/update-toys/${params.id}`)
       },
       {
         path: "addtoy",

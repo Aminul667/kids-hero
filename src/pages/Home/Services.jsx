@@ -7,7 +7,7 @@ const Services = () => {
   return (
     <>
     <h2 className="title text-center">Our Services</h2>
-      <div className="md:flex md:justify-between md:gap-2">
+      <div className="md:flex md:justify-between md:gap-2 mb-10">
         <div className="flex justify-evenly w-80 p-4 bg-[#FBFAF3] rounded-lg mb-4">
           <img className="w-10" src={car} alt="" />
           <div>
