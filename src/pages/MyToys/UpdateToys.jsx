@@ -15,7 +15,7 @@ const UpdateToys = () => {
 
   const handleUpdate = (updatedToy) => {
     // send data to the server
-    fetch(`https://b7a11-kids-toy-server.vercel.app/update-toys/${_id}`, {
+    fetch(`http://localhost:5000/update-toys/${_id}`, {
       method: "PUT",
       headers: {
         "content-type": "application/json",

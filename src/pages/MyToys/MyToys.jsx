@@ -4,26 +4,31 @@ import MyToyRow from "./MyToyRow";
 import useTitle from "../../hooks/useTitle";
 
 const MyToys = () => {
-  useTitle('My Toys')
+  useTitle("My Toys");
   const { user } = useContext(AuthContext);
   const [toys, setToys] = useState([]);
+  const [asc, setAsc] = useState(true);
+
   const email = user?.email;
 
-  const url = `https://b7a11-kids-toy-server.vercel.app/toys/${email}`;
+  // const url = `http://localhost:5000/toys/${email}?sort=${asc ? 'asc' : 'dsc'}`;
 
   useEffect(() => {
-    fetch(url)
+    fetch(`http://localhost:5000/toys/${email}?sort=${asc ? 'asc' : 'dsc'}`)
       .then((res) => res.json())
       .then((data) => {
         setToys(data);
       })
       .catch((error) => console.error(error));
-  }, [url]);
+  }, [email, asc]);
 
   return (
     <div>
       <div className="mt-10 mb-10">
         <h2 className="title text-center mb-5">This is My Toys Component</h2>
+        <button onClick={() => setAsc(!asc)} className="btn btn-primary bg-colorPrimary hover:bg-[#1e422f] mb-3">
+          {asc ? "Price Dec" : "Price Asc"}
+        </button>
         <div className="overflow-x-auto">
           <table className="table table-zebra w-full">
             {/* head */}

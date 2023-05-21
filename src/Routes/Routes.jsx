@@ -21,29 +21,29 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home></Home>,
-        loader: () => fetch("https://b7a11-kids-toy-server.vercel.app/toys"),
+        loader: () => fetch("http://localhost:5000/toys"),
       },
       {
         path: "alltoys",
         element: <AllToys></AllToys>,
-        loader: () => fetch("https://b7a11-kids-toy-server.vercel.app/all-toys"),
+        loader: () => fetch("http://localhost:5000/all-toys"),
       },
       {
         path: "alltoys/details/:id",
         element: <PrivateRoute><ToyDetails></ToyDetails></PrivateRoute>,
         loader: ({ params }) =>
-          fetch(`https://b7a11-kids-toy-server.vercel.app/toys-id/${params.id}`),
+          fetch(`http://localhost:5000/toys-id/${params.id}`),
       },
       {
         path: "mytoys",
         element: <PrivateRoute><MyToys></MyToys></PrivateRoute>,
-        // loader: ({params}) => fetch(`https://b7a11-kids-toy-server.vercel.app/toys/${params.id}`)
+        // loader: ({params}) => fetch(`http://localhost:5000/toys/${params.id}`)
       },
       {
         path: "updatetoy/:id",
         element: <UpdateToys></UpdateToys>,
         loader: ({ params }) =>
-          fetch(`https://b7a11-kids-toy-server.vercel.app/update-toys/${params.id}`),
+          fetch(`http://localhost:5000/update-toys/${params.id}`),
       },
       {
         path: "addtoy",

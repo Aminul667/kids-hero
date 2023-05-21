@@ -11,7 +11,9 @@ const AddToy = () => {
   const { isSubmitSuccessful } = formState;
 
   const onSubmit = (addToy) => {
-    fetch("https://b7a11-kids-toy-server.vercel.app/toys", {
+    console.log(addToy);
+    addToy.price = parseInt(addToy.price);
+    fetch("http://localhost:5000/toys", {
       method: "POST",
       headers: {
         "content-type": "application/json",
